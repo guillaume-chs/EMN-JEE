@@ -44,4 +44,17 @@
         <servlet-name>HelloParamServlet</servlet-name>
         <url-pattern>/HelloParam</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Redirect</servlet-name>
+        <servlet-class>td.servlet.Redirect</servlet-class>
+        <init-param>
+            <param-name>page</param-name>
+            <param-value>1</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Redirect</servlet-name>
+        <url-pattern>/redirect</url-pattern>
+    </servlet-mapping>
 </web-app>
