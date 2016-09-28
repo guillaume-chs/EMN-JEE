@@ -57,4 +57,46 @@
         <servlet-name>Redirect</servlet-name>
         <url-pattern>/redirect</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SesssionInitServlet</servlet-name>
+        <servlet-class>td.servlet.SessionInit</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SesssionShowServlet</servlet-name>
+        <servlet-class>td.servlet.SessionShow</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SesssionStopServlet</servlet-name>
+        <servlet-class>td.servlet.SessionStop</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SesssionInitServlet</servlet-name>
+        <url-pattern>/SesssionInit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SesssionShowServlet</servlet-name>
+        <url-pattern>/SesssionShow</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SesssionStopServlet</servlet-name>
+        <url-pattern>/SesssionStop</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Forward</servlet-name>
+        <servlet-class>td.servlet.Forward</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Forward</servlet-name>
+        <url-pattern>/forward</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Include</servlet-name>
+        <servlet-class>td.servlet.Include</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Include</servlet-name>
+        <url-pattern>/include</url-pattern>
+    </servlet-mapping>
 </web-app>
