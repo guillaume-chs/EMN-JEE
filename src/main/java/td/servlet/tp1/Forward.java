@@ -29,11 +29,29 @@ public class Forward extends HttpServlet {
             return;
         }
 
-        RequestDispatcher rd;
-        rd = getServletContext().getRequestDispatcher("/autre.html");
+        if ("template".equals(req.getParameter("page")))
+        {
+            req.setAttribute("value", 150);
 
-        if (rd != null) {
-            rd.forward(req,resp);
+            if (this.forward("/WEB-INF/page1.jsp", req, resp))
+            {
+                return;
+            }
         }
+
+        this.forward("/autre.html", req, resp);
+    }
+
+    protected boolean forward(String path, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher rd;
+        rd = getServletContext().getRequestDispatcher(path);
+        if (rd != null)
+        {
+            rd.forward(req, resp);
+
+            return true;
+        }
+
+        return false;
     }
 }

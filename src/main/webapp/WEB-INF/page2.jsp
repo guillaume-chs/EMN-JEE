@@ -5,8 +5,8 @@
     <title>First Page</title>
 </head>
 <body>
-<%@include file="WEB-INF/header.jspf"%>
+<%@include file="header.jspf"%>
 <h1>Page 2</h1>
-<%@include file="WEB-INF/footer.jspf"%>
+<%@include file="footer.jspf"%>
 </body>
 </html>
