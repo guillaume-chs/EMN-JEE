@@ -1,1 +1,8 @@
-<h1>Je suis le header</h1>
+<%!
+    int pageCount = 0;
+    void addCount() {
+        ++pageCount;
+    }
+%>
+<% addCount(); %>
+<h1>Je suis le header et je me suis affiché <%= pageCount %></h1>
