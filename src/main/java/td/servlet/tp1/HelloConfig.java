@@ -1,4 +1,4 @@
-package td.servlet;
+package td.servlet.tp1;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

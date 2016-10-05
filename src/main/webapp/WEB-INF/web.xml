@@ -6,7 +6,7 @@
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
         <description>Servlet de test Hello</description>
-        <servlet-class>td.servlet.Hello</servlet-class>
+        <servlet-class>td.servlet.tp1.Hello</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
@@ -20,7 +20,7 @@
     <servlet>
         <servlet-name>HelloConfigServlet</servlet-name>
         <description>Servlet de test Hello</description>
-        <servlet-class>td.servlet.HelloConfig</servlet-class>
+        <servlet-class>td.servlet.tp1.HelloConfig</servlet-class>
         <init-param>
             <param-name>lang</param-name>
             <param-value>en</param-value>
@@ -34,7 +34,7 @@
     <servlet>
         <servlet-name>HelloParamServlet</servlet-name>
         <description>Servlet de test Hello</description>
-        <servlet-class>td.servlet.HelloParam</servlet-class>
+        <servlet-class>td.servlet.tp1.HelloParam</servlet-class>
         <init-param>
             <param-name>lang</param-name>
             <param-value>en</param-value>
@@ -47,7 +47,7 @@
 
     <servlet>
         <servlet-name>Redirect</servlet-name>
-        <servlet-class>td.servlet.Redirect</servlet-class>
+        <servlet-class>td.servlet.tp1.Redirect</servlet-class>
         <init-param>
             <param-name>page</param-name>
             <param-value>1</param-value>
@@ -60,15 +60,15 @@
 
     <servlet>
         <servlet-name>SesssionInitServlet</servlet-name>
-        <servlet-class>td.servlet.SessionInit</servlet-class>
+        <servlet-class>td.servlet.tp1.SessionInit</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SesssionShowServlet</servlet-name>
-        <servlet-class>td.servlet.SessionShow</servlet-class>
+        <servlet-class>td.servlet.tp1.SessionShow</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>SesssionStopServlet</servlet-name>
-        <servlet-class>td.servlet.SessionStop</servlet-class>
+        <servlet-class>td.servlet.tp1.SessionStop</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SesssionInitServlet</servlet-name>
@@ -85,15 +85,19 @@
 
     <servlet>
         <servlet-name>Forward</servlet-name>
-        <servlet-class>td.servlet.Forward</servlet-class>
+        <servlet-class>td.servlet.tp1.Forward</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Forward</servlet-name>
         <url-pattern>/forward</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>PageForwarded</servlet-name>
+        <servlet-class>td.servlet.tp1.PageForwarded</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>Include</servlet-name>
-        <servlet-class>td.servlet.Include</servlet-class>
+        <servlet-class>td.servlet.tp1.Include</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Include</servlet-name>

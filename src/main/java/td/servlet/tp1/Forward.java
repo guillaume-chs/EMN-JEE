@@ -1,4 +1,4 @@
-package td.servlet;
+package td.servlet.tp1;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,8 +21,17 @@ public class Forward extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if ("hello".equals(req.getParameter("page")))
+        {
+            req.setAttribute("plop", "Coucou wesh");
+            getServletContext().getNamedDispatcher("PageForwarded").forward(req, resp);
+
+            return;
+        }
+
         RequestDispatcher rd;
         rd = getServletContext().getRequestDispatcher("/autre.html");
+
         if (rd != null) {
             rd.forward(req,resp);
         }
