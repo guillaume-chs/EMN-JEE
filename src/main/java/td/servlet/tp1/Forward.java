@@ -24,7 +24,8 @@ public class Forward extends HttpServlet {
         if ("hello".equals(req.getParameter("page")))
         {
             req.setAttribute("plop", "Coucou wesh");
-            getServletContext().getNamedDispatcher("PageForwarded").forward(req, resp);
+
+            this.forward("PageForwarded", req, resp);
 
             return;
         }
@@ -42,9 +43,10 @@ public class Forward extends HttpServlet {
         this.forward("/autre.html", req, resp);
     }
 
-    protected boolean forward(String path, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    private boolean forward(String path, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher rd;
-        rd = getServletContext().getRequestDispatcher(path);
+        rd = !path.contains(".") ? getServletContext().getNamedDispatcher(path) : getServletContext().getRequestDispatcher(path);
+
         if (rd != null)
         {
             rd.forward(req, resp);
